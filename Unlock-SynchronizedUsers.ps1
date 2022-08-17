@@ -26,7 +26,7 @@
 #                                                                           #  
 ############################################################################# 
 
-
+NOTE: Modify the variables with the required application, cert thumbprint and the tenantID.
 
 #>
 ##unlock
@@ -60,7 +60,7 @@ else {
 
 $connection = Connect-MgGraph -TenantId $tenantId -ClientId $applicationID -CertificateThumbprint $certThumbPrint
 
-$AllLockedUsers = Search-ADAccount -UsersOnly -LockedOut -SearchBase "OU=SyncedUsers,DC=ddmdi,DC=lab" | select-object name, samaccountname, userprincipalname, lockedout
+$AllLockedUsers = Search-ADAccount -UsersOnly -LockedOut -SearchBase "OU=SyncedUsers,DC=DomainName,DC=Com" | select-object name, samaccountname, userprincipalname, lockedout
 
 Add-Content -Path .\$ProcessLog -Value "Local AD Locked Out Users Collected: $(($AllLockedUsers | measure-object).count)"
 
