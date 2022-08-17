@@ -1,5 +1,5 @@
 # SyncLockedStatusToAzure
-Set of scripts that will allow admins to block logins for locked out synchronized accounts in Azure AD.
+Set of scripts that will allow admins to block logins for locked out synchronized accounts in Azure AD. The application must be granted write permission to manage the users.
 
 Required Setup for App-Only Authentication:
 
