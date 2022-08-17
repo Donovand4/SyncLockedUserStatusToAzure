@@ -26,7 +26,7 @@
 #                                                                           #  
 ############################################################################# 
 
-
+NOTE: Modify the variables with the required application, cert thumbprint and the tenantID.
 
 #>
 Set-Location -Path $PSScriptRoot
