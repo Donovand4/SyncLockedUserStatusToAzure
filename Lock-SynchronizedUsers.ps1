@@ -57,7 +57,7 @@ else {
     Add-Content -Path .\$ProcessLog -Value "New Export File Created"
 }
 
-$AllLockedUsers = (Search-ADAccount -UsersOnly -LockedOut -SearchBase "OU=SyncedUsers,DC=ddmdi,DC=lab").userprincipalname
+$AllLockedUsers = (Search-ADAccount -UsersOnly -LockedOut -SearchBase "OU=SyncedUsers,DC=DomainName,DC=Com").userprincipalname
 
 Add-Content -Path .\$ProcessLog -Value "Local AD Locked Out Users Collected: $(($AllLockedUsers | measure-object).count)"
 
